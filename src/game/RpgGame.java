@@ -6,13 +6,13 @@ import players.*;
 public class RpgGame {
 
     public static void startGame() {
-        int i=1;
+        int i = 1;
         Boss boss = new Boss(1200, 30);
         Hero[] heroes = getHeroesArray();
         showStatistics(heroes, boss);
         while (!isFinished(heroes, boss)) {
             System.out.println("____________");
-            System.out.println("РАУНД"+ i);
+            System.out.println("РАУНД" + i);
             System.out.println("____________");
             round(heroes, boss);
             i++;
@@ -72,10 +72,11 @@ public class RpgGame {
                 new Warrior(100, 10),
                 new Magical(100, 10),
                 new Hunter(100, 10),
-                new Medical(100, 10)};
-                new Thor(100, 10);
+                new Medical(100, 10),
+                new Thor(100, 10)};
         return heroes;
     }
+
 
     private static void showStatistics(Hero[] heroes, Boss boss) {
         System.out.println("_____________");
@@ -83,7 +84,6 @@ public class RpgGame {
         for (Hero hero : heroes) {
             System.out.println("Hero " + hero.getClass().getSimpleName() +
                     " health = " + hero.getHealth());
-            
         }
         System.out.println("_____________");
     }

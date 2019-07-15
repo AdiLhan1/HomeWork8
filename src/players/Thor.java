@@ -1,11 +1,12 @@
 package players;
 
+
+import java.util.Random;
 import boss.Boss;
 import game.Ability;
 
-import java.util.Random;
-
 public class Thor extends Hero {
+
     public Thor(int health, int damage) {
         super(health, damage, Ability.DEAFEN);
     }
@@ -21,6 +22,14 @@ public class Thor extends Hero {
             boss.setDamage(30);
         }
 
+
     }
 }
+
+
+
+
+
+
+
 
